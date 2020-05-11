@@ -86,8 +86,8 @@ const Signin = props => {
           onChange={handleChange}
         />
         <br />
-        <button onClick={handleSubmit}>Submit!</button>
-        {/* <Button onClick={handleSubmit}>Submit!</Button> */}
+
+        <Button onClick={handleSubmit}>Submit!</Button>
         <p>
           If you do not have a user account, please{" "}
           <Link to="/signup">register</Link>
