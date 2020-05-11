@@ -44,8 +44,7 @@ const Signin = props => {
   console.log(props);
   const [user, setUser] = useState({
     username: "",
-    password: "",
-    department: ""
+    password: ""
   });
   const handleChange = event => {
     setUser({ ...user, [event.target.name]: event.target.value });

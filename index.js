@@ -11,10 +11,10 @@ const port = process.env.PORT || 5010;
 server.use(cors());
 server.use(helmet());
 server.use(express.json());
+
 server.use(cors({ credentials: true, origin: "http://localhost:3000" })); // required to get cookies to work correctly
 
 server.use(cookieParser());
-
 server.use("/auth", authRouter);
 server.use("/users", usersRouter);
 
