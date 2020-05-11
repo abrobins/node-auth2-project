@@ -1,4 +1,5 @@
 import React from "react";
+import { useCookies } from "react-cookie";
 import { Route, Redirect } from "react-router-dom";
 
 /*
@@ -10,6 +11,8 @@ import { Route, Redirect } from "react-router-dom";
 
 // rest operator (looks a lot like spread operator)
 const PrivateRoute = ({ component: Component, ...rest }) => {
+  // const [cookies, setCookie] = useCookies(["token"]);
+
   // const Component = component;
   const token = window.localStorage.getItem("token");
   return (

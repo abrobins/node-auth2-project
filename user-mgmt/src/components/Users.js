@@ -23,7 +23,7 @@ const Users = () => {
 
   useEffect(() => {
     axiosWithAuth()
-      .get("/users", { withCredentials: true }) // required to get cookies to work properly
+      .get("/users") // required to get cookies to work properly
       .then(res => {
         console.log(res.data);
         setUsers(res.data);

@@ -54,9 +54,7 @@ const Signin = props => {
     console.log("user", user);
     // setUser({ username: "", email: "", password: "" });
     axios
-      .post("http://localhost:5010/auth/login", user, {
-        withCredentials: true // required to get cookies to work properly
-      })
+      .post("http://localhost:5010/auth/login", user)
       .then(res => {
         console.log("Log in data", res.data);
         localStorage.setItem("token", res.data.token);
